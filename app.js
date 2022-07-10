@@ -6,10 +6,10 @@ const app = express()
 // middleware
 app.use(express.static('./public'))
 
-app.get('/',(req,res)=>{
-    console.log('index fetched')
-    res.sendFile(path.resolve(__dirname,'./nav-bar/index.html'))
-})
+// app.get('/',(req,res)=>{
+//     console.log('index fetched')
+//     res.sendFile(path.resolve(__dirname,'./nav-bar/index.html'))
+// })
 
 app.all('*',(req,res) => {
     res.send('<h1>resource not found</h1>')
